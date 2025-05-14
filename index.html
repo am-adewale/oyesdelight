@@ -11,15 +11,18 @@
     <header>
         <div class="logo"><i class="fas fa-utensils"></i> Oyesdelight</div>
         <nav>
-    <button class="toggle-nav"aria-label="Toggle navigation">&#9776;</button>
-    <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#categories">Menu</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#social">Socials</a></li>
-    </ul>
-    </nav>
+            <!-- Make toggle button larger and more noticeable -->
+            <button class="toggle-nav" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <ul class="nav-links">
+                <!-- Add close button to the mobile menu -->
+                <li class="close-menu-btn"><button aria-label="Close menu"><i class="fas fa-times"></i></button></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#categories">Menu</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#social">Socials</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="home" class="hero">
@@ -33,11 +36,11 @@
 
         <section id="about" class="about">
             <h2>About Us</h2>
-            <p>At Oye’s Delight, we believe that every bite should be an experience—one that brings warmth, comfort, and a little bit of magic to your day. Whether you're craving rich, homemade flavors or looking for the perfect treat to share, 
-            we’ve got something special just for you.
+            <p>At Oye's Delight, we believe that every bite should be an experience—one that brings warmth, comfort, and a little bit of magic to your day. Whether you're craving rich, homemade flavors or looking for the perfect treat to share, 
+            we've got something special just for you.
             Our passion for crafting delicious, high-quality delights comes from a deep love for good food and great company. From our signature treats to carefully curated recipes, everything we make is designed to bring joy with every bite.
-            So, whether you’re here to satisfy a sweet tooth, discover something new, or simply indulge in your favorites, Oye’s Delight is here to make every moment a little more delicious.
-            Taste the joy. Feel the delight. Welcome to Oye’s Delight!</p>
+            So, whether you're here to satisfy a sweet tooth, discover something new, or simply indulge in your favorites, Oye's Delight is here to make every moment a little more delicious.
+            Taste the joy. Feel the delight. Welcome to Oye's Delight!</p>
         </section>
 
         <section class="why-choose-us">
@@ -86,8 +89,8 @@
         <section class="reviews">
             <h2>Customer Reviews</h2>
             <blockquote>
-                <p>⭐ “Best food delivery service! The meals are always fresh, and the delivery is super fast.” – Kayode Oluwaseyi</p>
-                <p>⭐ “I love how easy it is to order snacks and drinks, Everything arrives in perfect condition!” – Olawale Ayokunmi</p>
+                <p>⭐ "Best food delivery service! The meals are always fresh, and the delivery is super fast." – Kayode Oluwaseyi</p>
+                <p>⭐ "I love how easy it is to order snacks and drinks, Everything arrives in perfect condition!" – Olawale Ayokunmi</p>
             </blockquote>
         </section>
 
@@ -101,26 +104,25 @@
 
         <section id="social" class="social-media">
              <h2>Follow Us</h2>
-             <p class="follow-text">Stay connected for delicious updates!</p> <!-- New text -->
-    <div class="social-links">
-    </div>
-       </section>
-
-        <div class="social-links">
-            <a href="https://www.instagram.com/oyesdelight?igsh=ZmU2Ynl0ejA3bGh6&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.tiktok.com/@oyes.delight?_t=ZM-8v4JN872rZO&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-x"></i></a>
-        </div>
+             <p class="follow-text">Stay connected for delicious updates!</p>
+             <div class="social-links">
+                <a href="https://www.instagram.com/oyesdelight?igsh=ZmU2Ynl0ejA3bGh6&utm_source=qr" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@oyes.delight?_t=ZM-8v4JN872rZO&_r=1" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-x"></i></a>
+            </div>
+        </section>
     </main>
+    <!-- Mobile menu overlay for closing nav when clicking outside -->
+    <div class="menu-overlay"></div>
     <footer>
         <p>&copy; 2024 Oye's Delight. All rights reserved.</p>
     </footer>
     <script>
-  if (!document.querySelector('.fa-font-awesome')) {
-    document.write('<link rel="stylesheet" href="/local-path/font-awesome.css">');
-  }
-</script>
+    if (!document.querySelector('.fa-font-awesome')) {
+        document.write('<link rel="stylesheet" href="/local-path/font-awesome.css">');
+    }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

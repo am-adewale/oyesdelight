@@ -97,7 +97,7 @@
     padding: 2rem;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
-                url('imgg.jpg') center/cover no-repeat;
+                url('img/imgg.jpg') center/cover no-repeat;
     overflow: hidden;
   }
   
@@ -443,6 +443,44 @@
       transform: scale(1);
     }
   }
+
+  .toggle-nav {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--dark);
+    padding: 10px;
+    z-index: 1001;
+    transition: color 0.3s;
+}
+
+.toggle-nav:hover {
+    color: var(--primary);
+}
+
+/* Close button in mobile menu */
+.close-menu-btn {
+    display: none;
+    text-align: right;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.close-menu-btn button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--dark);
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.close-menu-btn button:hover {
+    color: var(--primary);
+}
   
   /* Responsive Design */
   @media (max-width: 992px) {
@@ -455,17 +493,28 @@
     .toggle-nav {
       display: block;
     }
+
+    .close-menu-btn {
+      display: block;
+      position: sticky;
+      top: 10;
+      background: white;
+      padding: 15px 0;
+      z-index: 1002;
+      text-align: center;
+  }
   
     .nav-links {
       position: fixed;
       top: 0;
       right: -100%;
-      width: 80%;
+      width: 65%;
       height: 100vh;
-      background: white;
+      background:  white;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
       transition: var(--transition);
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
@@ -473,6 +522,22 @@
     .nav-links.active {
       right: 0;
     }
+
+    .nav-links li {
+      margin: 15px 0;
+      width: 30%;
+  }
+
+  .nav-links a {
+      display: block;
+      padding: 5px 0;
+      font-size: 18px;
+      border-bottom: 1px solid #eee;
+  }
+
+  body.menu-open {
+    overflow: hidden;
+  }
   
     .menu-dropdown:hover .dropdown-content {
       position: static;
@@ -506,6 +571,18 @@
       width: 100%;
     }
   }
+
+  @media (max-width: 480px) {
+    .toggle-nav {
+        font-size: 28px; /* Even larger on very small screens */
+        padding: 10px 15px;
+    }
+    
+    .close-menu-btn button {
+        font-size: 28px;
+        padding: 10px 15px;
+    }
+}
   
   @media (max-width: 576px) {
     .logo {
@@ -532,7 +609,7 @@
   100% { transform: scale(1); opacity: 1; }
 }
 
-.overlay {
+.menu-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -545,7 +622,7 @@
   transition: opacity 0.4s;
 }
 
-.overlay.active {
+.menu.overlay.active {
   opacity: 1;
   pointer-events: all;
 }
