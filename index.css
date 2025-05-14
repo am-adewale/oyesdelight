@@ -97,7 +97,7 @@
     padding: 2rem;
     color: white;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), 
-                url('img/imgg.jpg') center/cover no-repeat;
+                url('imgg.jpg') center/cover no-repeat;
     overflow: hidden;
   }
   
